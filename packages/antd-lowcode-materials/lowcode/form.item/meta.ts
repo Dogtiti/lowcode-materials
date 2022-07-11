@@ -60,6 +60,14 @@ export default {
       propType: { type: 'oneOfType', value: ['string', 'node'] },
     },
     {
+      name: 'tooltip',
+      title: {
+        label: '标签提示信息',
+        tip: '标签提示信息，当需要对标签进行解释时，可以使用这个。',
+      },
+      propType: { type: 'oneOfType', value: ['string', 'node'] },
+    },
+    {
       name: 'required',
       title: {
         label: '必填标记',
@@ -208,11 +216,25 @@ export default {
       propType: {
         type: 'shape',
         value: [
-          { name: 'required', title: '是否必填', propType: 'bool' },
+          {
+            name: 'required',
+            title: '是否必填',
+            propType: 'bool',
+            setter: 'BoolSetter',
+            supportVariable: true,
+            extraProps: {
+              setValue(target: any, value: boolean) {
+                // 同步 必填标记
+                target.parent.parent.setPropValue('required', value);
+              }
+            }
+          },
           {
             name: 'message',
             title: '错误信息提示',
             propType: 'string',
+            setter: 'StringSetter',
+            supportVariable: true
           },
         ],
       },

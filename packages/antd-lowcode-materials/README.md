@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image-antd]][npm-url-antd]
 
-### [在线示例 / DEMO](https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.3/build/lowcode/index.html)
+### [在线示例 / DEMO](https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.9/build/lowcode/index.html)
 
 ### 使用 / Usage
 #### NPM
@@ -17,9 +17,9 @@ material.setAssets(assets);
 #### CDN
 ```js
 // in GeneralWorkbench init
-const assets = await (await fetch(`https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.3/build/lowcode/assets-prod.json`)).json();
+const assets = await (await fetch(`https://alifd.alicdn.com/npm/@alilc/antd-lowcode-materials@1.0.9/build/lowcode/assets-prod.json`)).json();
 material.setAssets(assets);
 ```
 
 [npm-image-antd]: https://img.shields.io/npm/v/@alilc/antd-lowcode-materials.svg?style=flat-square
-[npm-url-antd]: http://npmjs.org/package/@alilc/antd-lowcode-engine
+[npm-url-antd]: http://npmjs.org/package/@alilc/antd-lowcode-materials
